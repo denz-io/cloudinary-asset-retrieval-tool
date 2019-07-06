@@ -4,6 +4,9 @@ require_once  ( dirname(__DIR__) . '/vendor/autoload.php' );
 
 class Controller
 {
+    /*
+     * Initialize vendor assets and .env. 
+     */
     public function __construct() 
     {
         $this->env = Dotenv\Dotenv::create(dirname(__DIR__));
@@ -20,11 +23,16 @@ class Controller
         ]);
     }
 		
+    /*
+     * Set second parameter if you want to catch a specific status.
+     * Set third parameter if you want to specify request timeout.
+     * @param $url = String, $status = string, $wait = integer
+     * @return boolean
+     */
     public function http_response($url, $status = null, $wait = 3)
     {
 	$time = microtime(true);
 	$expire = $time + $wait;
-
 	$pid = pcntl_fork();
 	if ($pid == -1) {
 	    die('could not fork');
