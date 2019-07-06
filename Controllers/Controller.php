@@ -20,7 +20,6 @@ class Controller
         ]);
     }
 		
-
     public function http_response($url, $status = null, $wait = 3)
     {
 	$time = microtime(true);

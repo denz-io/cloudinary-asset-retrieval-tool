@@ -2,7 +2,7 @@
 
 require_once  ('Controller.php' );
 
-class CloudinaryUtil extends Controller 
+class CloudinaryUtility extends Controller 
 {
     public function __construct() 
     {

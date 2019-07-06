@@ -1,2 +1,4 @@
 .env
 /vendor
+assetlist.txt
+datapacket.json
