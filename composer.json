@@ -1,0 +1,11 @@
+{
+    "name": "denzdacs/cloudinary-asset-retrieval-tool",
+    "description": "A php tool that can take server assets using a list and upload them to cloudinary.",
+    "keywords": ["php", "coudinary"],
+    "license": "none",
+    "type": "project",
+    "require": {
+        "php": ">=7.0.0",
+        "cloudinary/cloudinary_php": "^1.14"
+    }
+}
