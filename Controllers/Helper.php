@@ -27,7 +27,7 @@ class Helper
     public function Logger($text)
     {
         $file = fopen("assetlist.txt", "a") or die ("Unable to open file!");
-        $this->writeToFile($file, $text);
+        fwrite($file, "\n". $text);
+        fclose($file);
     }
-    
 }
