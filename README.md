@@ -14,7 +14,7 @@ specific to my situation and if you wan to use this you need to edit this part o
 
 #How to use
 
-This has not CLI maybe in the future ill add one. 
+This has no CLI yet, maybe in the future ill add one. 
 
 To create asset list 
 
