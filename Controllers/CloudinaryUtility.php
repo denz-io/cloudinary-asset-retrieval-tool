@@ -26,9 +26,11 @@ class CloudinaryUtility extends Controller
      * @param String
      * @return Boolean 
      */
-    public function uploadFile($file)
+    public function uploadFile($file, $file_name = null)
     {
-        $cloudinaryRes = \Cloudinary\Uploader::upload($file);
+        $cloudinaryRes = \Cloudinary\Uploader::upload($file, [
+            "public_id" => $file_name
+        ]);
         return $cloudinaryRes;
     }
 }

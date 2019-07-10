@@ -3,26 +3,33 @@
 require_once  './Controllers/Helper.php';
 require_once  './Controllers/CloudinaryUtility.php';
 
-class CreateAssetList
+class CreateAssetList extends Controller
 {
     public function __construct () 
     {
-        echo("Running \n");
+        echo("Running... \n \n");
         $this->helper = new Helper; 
         $this->cloud = new CloudinaryUtility; 
-        $this->datapacket = $this->helper->explodeJson('./datapacket.json',PHP_EOL);
+        $this->setUpDataPacket();
         $this->createList();
+    }
+
+    private function setUpDataPacket()
+    {
+        echo("Prepping data packet... \n \n");
+        $datapacket = getenv('DATA_PACKET_NAME') ? './'.getenv('DATA_PACKET_NAME') : './datapacket.json';
+        $this->datapacket = $this->helper->explodeJson($datapacket , PHP_EOL);
     }
 
     private function createList()
     {
-        echo("Creating asset list. This may take a while... \n");
+        echo("Creating asset list. This may take a while... \n \n");
         foreach ($this->datapacket as $user) {
             $decoded_data = json_decode($user, true);
             $this->handleProfile($decoded_data['photo']);
             $this->handleArtwork($decoded_data);
         }
-        echo("Done \n");
+        echo("Done.");
     }
 
     private function handleProfile($profile)

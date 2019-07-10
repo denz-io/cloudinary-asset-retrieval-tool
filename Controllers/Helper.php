@@ -1,6 +1,8 @@
 <?php
 
-class Helper 
+require_once  ('Controller.php' );
+
+class Helper extends Controller 
 {
 
     /*
@@ -26,8 +28,15 @@ class Helper
 
     public function Logger($text)
     {
-        $file = fopen("assetlist.txt", "a") or die ("Unable to open file!");
+        $assetlist_name = getenv('ASSET_LIST_FILE_NAME') ? getenv('ASSET_LIST_FILE_NAME') : 'assetlist.txt';
+        $file = fopen($assetlist_name, "a") or die ("Unable to open file!");
         fwrite($file, "\n". $text);
         fclose($file);
+    }
+
+    public function dd($data)
+    {
+        var_dump($data);
+        die();
     }
 }
