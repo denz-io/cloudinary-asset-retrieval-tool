@@ -1,9 +1,9 @@
 # Cloudinary-Asset-Retrieval-Tool
 
 I created this tool for a specific situation. Which is if you are using cloudinary as SAAS but previosly stored assets 
-in server. Now this is no problem in general but if you dedcide to switch services and then you find out that thay you 
-have hundereds of gigabityes of assets in server and not only that there is no way for you to know which assets to upload 
-to cloudinary (this is worst case scenario, if your db is fucked) you're basically in hell so I made this.
+in server. Now this is no problem in general but if you decided to switch services and then you find out that you 
+have hundereds of gigabityes of assets in server and not only that, there is no way for you to know which assets to upload 
+to cloudinary or else risk redundant files (this is worst case scenario, if your db is fucked). If this is your situation then you're basically in hell so I made this.
 
 #Setup
 
