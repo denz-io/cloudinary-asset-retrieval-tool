@@ -18,7 +18,7 @@ to cloudinary or else risk redundant files (this is worst case scenario, if your
 3. Setup datapacket, this is just a JSON file. Unfotunately for now the way the data is read is 
 specific to my situation and if you wan to use this you need to edit this part of the code. 
 
-# ow to use
+# How to use
 
 This has no CLI yet, maybe in the future ill add one. 
 
