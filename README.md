@@ -5,20 +5,20 @@ in server. Now this is no problem in general but if you decided to switch servic
 have hundereds of gigabityes of assets in server and not only that, there is no way for you to know which assets to upload 
 to cloudinary or else risk redundant files (this is worst case scenario, if your db is fucked). If this is your situation then you're basically in hell so I made this.
 
-#Dependencies
+# Dependencies
 
 1. "php": ">=7.0.0",
 2. "cloudinary/cloudinary_php": "^1.14",
 3. "vlucas/phpdotenv": "^3.4"
 
-#Setup
+# Setup
 
 1. Run composer install to download dependencies.
 2. Set up your credentials .env
 3. Setup datapacket, this is just a JSON file. Unfotunately for now the way the data is read is 
 specific to my situation and if you wan to use this you need to edit this part of the code. 
 
-#How to use
+# ow to use
 
 This has no CLI yet, maybe in the future ill add one. 
 
