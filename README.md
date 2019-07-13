@@ -16,7 +16,7 @@ to cloudinary or else risk redundant files (this is worst case scenario, if your
 1. Run composer install to download dependencies.
 2. Set up your credentials .env
 3. Setup datapacket, this is just a JSON file. Unfotunately for now the way the data is read is 
-specific to my situation and if you wan to use this you need to edit this part of the code. 
+specific to my situation and if you want to use this you need to edit this part of this code. 
 
 # How to use
 
