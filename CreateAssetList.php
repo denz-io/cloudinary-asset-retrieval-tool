@@ -39,19 +39,20 @@ class CreateAssetList extends Controller
         }
     }
 
-    private function handleArtwork(Array $user)
+    private function handleArtwork($user)
     {
-        $art_counter = 0;
-        forEach($user as $res) {
-            if (isset($user['artwork_' . $art_counter])) {
-                $artwork = $user['artwork_' . $art_counter];
-                if ($artwork) {
-                    $this->handleValidation($artwork);
+        if ($user) {
+            $art_counter = 0;
+            forEach($user as $res) {
+                if (isset($user['artwork_' . $art_counter])) {
+                    $artwork = $user['artwork_' . $art_counter];
+                    if ($artwork) {
+                        $this->handleValidation($artwork);
+                    }
                 }
+                $art_counter++;   
             }
-            $art_counter++;   
         }
-
     }
 
     private function handleValidation($asset)
