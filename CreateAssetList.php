@@ -26,16 +26,16 @@ class CreateAssetList extends Controller
         echo("Creating asset list. This may take a while... \n \n");
         foreach ($this->datapacket as $user) {
             $decoded_data = json_decode($user, true);
-            $this->handleProfile($decoded_data['photo']);
+            $this->handleProfile($decoded_data);
             $this->handleArtwork($decoded_data);
         }
         echo("Done.");
     }
 
-    private function handleProfile($profile)
+    private function handleProfile($user)
     {
-        if ($profile) {
-            $this->handleValidation($profile);
+        if (isset($user['photo'])) {
+            $this->handleValidation($user['photo']);
         }
     }
 
