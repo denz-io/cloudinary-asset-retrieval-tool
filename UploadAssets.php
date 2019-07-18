@@ -24,12 +24,14 @@ class UploadAssets
     private function uploadToCloudinary()
     {
         echo("Uplading assets to cloudinary... \n \n");
+        $counter = 0;
         forEach ($this->assetlist as $file) {
             if ($file_source = $this->checkIfFileExist($file)) {
                 $this->cloud->uploadFile($file_source, $file);
+                $counter++;
             }
         }
-        echo("Done");
+        echo("Done. Uploaded " . $counter++ . " files to cloudinary");
     }
 
     private function checkIfFileExist($file_name)
