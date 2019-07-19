@@ -65,5 +65,3 @@ class CreateAssetList extends Controller
         }
     }
 }
-
-new CreateAssetList;

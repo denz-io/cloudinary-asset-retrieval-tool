@@ -45,5 +45,3 @@ class UploadAssets
         }
     }
 }
-
-new UploadAssets;
