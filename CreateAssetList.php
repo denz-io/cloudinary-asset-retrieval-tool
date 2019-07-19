@@ -23,11 +23,14 @@ class CreateAssetList extends Controller
 
     private function createList()
     {
+	$progress = 1;
         echo("Creating asset list. This may take a while... \n \n");
-        foreach ($this->datapacket as $user) {
+        echo("Reading through " .  count($this->datapacket) . " records. \n \n");
+        foreach ($this->datapacket as $key => $user) {
             $decoded_data = json_decode($user, true);
             $this->handleProfile($decoded_data);
             $this->handleArtwork($decoded_data);
+	    $this->helper->progressBar($progress++ ,count($this->datapacket));
         }
         echo("Done.");
     }

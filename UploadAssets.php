@@ -7,7 +7,7 @@ class UploadAssets
 {
     public function __construct()
     {
-        echo("Running... \n \n");
+        echo("Running Program... \n \n");
         $this->helper = new Helper; 
         $this->cloud = new CloudinaryUtility; 
         $this->getAssetList();
@@ -23,15 +23,18 @@ class UploadAssets
 
     private function uploadToCloudinary()
     {
-        echo("Uplading assets to cloudinary... \n \n");
         $counter = 0;
-        forEach ($this->assetlist as $file) {
+        $progress = 1;
+        echo("Uplading assets to cloudinary: \n \n");
+        echo("Going through " . count($this->assetlist) . " items. \n \n");
+        forEach ($this->assetlist as $file ) {
             if ($file_source = $this->checkIfFileExist($file)) {
-                $this->cloud->uploadFile($file_source, $file);
-                $counter++;
+                $this->cloud->uploadFile($file_source, substr($file, 0, strpos($file, ".")));
+		$counter++;
             }
+	    $this->helper->progressBar( $progress++ , count($this->assetlist));
         }
-        echo("Done. Uploaded " . $counter++ . " files to cloudinary");
+        echo("\n \n Done. Uploaded " . $counter . " files to cloudinary");
     }
 
     private function checkIfFileExist($file_name)
