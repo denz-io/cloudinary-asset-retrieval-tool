@@ -6,8 +6,8 @@ require __DIR__ . '/vendor/autoload.php';
 
 use Symfony\Component\Console\Application;
 
-require_once  './UploadCommand.php';
-require_once  './CreateListCommand.php';
+require_once  './Commands/UploadCommand.php';
+require_once  './Commands/CreateListCommand.php';
 
 $application = new Application();
 

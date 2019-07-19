@@ -1,7 +1,7 @@
 <?php 
 
-require_once  './Controllers/Helper.php';
-require_once  './Controllers/CloudinaryUtility.php';
+include_once dirname(__DIR__) . "/Controllers/Helper.php";
+include_once dirname(__DIR__) . "/Controllers/CloudinaryUtility.php";
 
 class CreateAssetList extends Controller
 {

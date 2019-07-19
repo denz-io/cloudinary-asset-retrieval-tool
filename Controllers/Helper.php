@@ -1,6 +1,6 @@
 <?php
 
-require_once  ('Controller.php' );
+require_once  'Controller.php';
 
 class Helper extends Controller 
 {

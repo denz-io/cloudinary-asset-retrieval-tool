@@ -6,7 +6,7 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 
-require_once  './CreateAssetList.php';
+include_once dirname(__DIR__) . "/App/CreateAssetList.php";
 
 class CreateListCommand extends Command
 {
