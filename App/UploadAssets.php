@@ -25,7 +25,7 @@ class UploadAssets
     {
         $counter = 0;
         $progress = 1;
-        echo("Uplading assets to cloudinary: \n \n");
+        echo("Uploading assets to cloudinary: \n \n");
         echo("Going through " . count($this->assetlist) . " items. \n \n");
         forEach ($this->assetlist as $file ) {
             if ($file_source = $this->checkIfFileExist($file)) {
