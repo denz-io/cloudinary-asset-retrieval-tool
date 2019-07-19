@@ -7,28 +7,31 @@ to cloudinary or else risk redundant files (this is worst case scenario, if your
 
 # Dependencies
 
-1. "php": ">=7.0.0",
+1. "php": ">=7.1.0",
 2. "cloudinary/cloudinary_php": "^1.14",
-3. "vlucas/phpdotenv": "^3.4"
+3. "vlucas/phpdotenv": "^3.4",
+4. "symfony/console": "^4.3"
 
 # Setup
 
 1. Run composer install to download dependencies.
-2. Set up your credentials .env
+2. Set up your credentials in .env
 3. Setup datapacket, this is just a JSON file. Unfotunately for now the way the data is read is 
-specific to my situation and if you want to use this you need to edit this part of this code. 
+specific to my situation and if you want to use this you need to edit the code in App folder. 
 
 # How to use
 
-This has no CLI yet, maybe in the future ill add one. 
+CLI
+
+Run php denz to see command list.
 
 To create asset list 
 
 1. Make sure that your data packet is set properly and that you are reading the correct data.
-2. run php CreateAssetList.php.
+2. run php denz cloud:list.
 
 To upload resources 
 
 1. Make sure that the folder source of your assets is correct or else
    cloudinary will throw an error.
-2. run php UploadAssets.php
+2. run php denz cloud:upload.
