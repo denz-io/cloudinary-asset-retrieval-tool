@@ -14,10 +14,12 @@ to cloudinary or else risk redundant files (this is worst case scenario, if your
 
 # Setup
 
-1. Run composer install to download dependencies.
-2. Set up your credentials in .env
-3. Setup datapacket, this is just a JSON file. Unfotunately for now the way the data is read is 
-specific to my situation and if you want to use this you need to edit the code in App folder. 
+1. Run composer install to download dependencies. Install composer by following the documentation here https://getcomposer.org/
+2. Set up your credentials in .env, check .env.example for reference.
+3. Setup datapacket.json, this is just a JSON file. Unfotunately for now the way the data is read is 
+specific to my situation and if you want to use this you need to edit the code in App folder. If you dont want to use
+the name datapacket.json you can change this by adding a costum name in .env. 
+4. Similarly if you want the file output to have a specific name isntead of assetlist.txt you can set it in your env file.
 
 # How to use
 
